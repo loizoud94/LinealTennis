@@ -12,8 +12,8 @@ This repository contains scripts and data files for scraping tennis match result
 - **`tnnslive_scraper.py`**: A web scraping script that extracts tennis match results from [tnnslive.com](https://tnnslive.com) and stores them in `tennis_matches.csv`.
 - **`atp_rankings_updater.py`**: Updates the ATP rankings based on the results in `tennis_matches.csv`, using the initial rankings from `initial_atp_rankings.txt`.
 - **`wta_rankings_updater.py`**: Similar to `atp_rankings_updater.py`, but for WTA rankings, using `initial_wta_rankings.txt`.
-- **`initial_atp_rankings.txt`**: The initial ATP player rankings used as the starting point for the lineal ranking system.
-- **`initial_wta_rankings.txt`**: The initial WTA player rankings used as the starting point for the lineal ranking system.
+- **`initial_atp_rankings.txt`**: The initial ATP player rankings used as the starting point for the lineal ranking system, from the official rankings as at 26th August 2024.
+- **`initial_wta_rankings.txt`**: The initial WTA player rankings used as the starting point for the lineal ranking system, from the official rankings as at 26th August 2024.
 - **`tennis_matches.csv`**: A CSV file containing the scraped match results. This file is continually updated by `tnnslive_scraper.py`.
 - **`updated_atp_rankings.csv`**: The CSV file where updated ATP rankings are stored after each script run.
 - **`updated_wta_rankings.csv`**: The CSV file where updated WTA rankings are stored after each script run.
@@ -63,7 +63,7 @@ pip install pandas requests beautifulsoup4 selenium
 
 To automate the entire process, you can use cron jobs (Linux/Mac) or Task Scheduler (Windows) to run these scripts periodically. This will ensure your match results and rankings are always up-to-date.
 
-## Visualization
+## Visualisation
 
 If you would like to visualise the rankings over time, you can create a script that reads from the `updated_atp_rankings.csv` or `updated_wta_rankings.csv` files and generates line plots or other types of charts.
 
